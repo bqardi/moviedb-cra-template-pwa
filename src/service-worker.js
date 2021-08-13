@@ -70,12 +70,3 @@ self.addEventListener('message', (event) => {
 });
 
 // Any other custom service worker logic can go here.
-self.addEventListener("install", e => {
-	e.waitUntil(
-		caches.open(CACHE_NAME)
-			.then(cache => {
-				console.log("Cache opened");
-				return cache.addAll(self.__WB_MANIFEST);
-			})
-	)
-});
