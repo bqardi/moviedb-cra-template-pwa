@@ -32,8 +32,8 @@ function App() {
     <GlobalProvider>
       <div className="App">
         <Router>
-          <Header default />
-          <Header path="/movies/:id" showBack />
+          <Header to="/" default />
+          <Header path="/movies/:id" to="/movies" />
         </Router>
         <div className="App__fill">
           <Router>
