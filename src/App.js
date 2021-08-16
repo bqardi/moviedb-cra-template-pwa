@@ -47,4 +47,9 @@ function App() {
     </GlobalProvider>
   );
 }
+
+Notification.requestPermission(function(status) {
+  console.log("Notification permission status: ", status)
+})
+
 export default App;
